@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SysComercio", "SysComercio\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CamadaApresentacao", "CamadaApresentacao\CamadaApresentacao.csproj", "{5D649731-75A5-41EE-AD92-6C418E590097}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CamadaNegocio", "CamadaNegocio\CamadaNegocio.csproj", "{C343C9D7-46BB-4E6C-97FE-F70ED8E8EED5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{5D649731-75A5-41EE-AD92-6C418E590097}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5D649731-75A5-41EE-AD92-6C418E590097}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5D649731-75A5-41EE-AD92-6C418E590097}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C343C9D7-46BB-4E6C-97FE-F70ED8E8EED5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C343C9D7-46BB-4E6C-97FE-F70ED8E8EED5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C343C9D7-46BB-4E6C-97FE-F70ED8E8EED5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C343C9D7-46BB-4E6C-97FE-F70ED8E8EED5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
