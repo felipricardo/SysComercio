@@ -175,7 +175,7 @@ namespace CamadaDados
         }
 
         // Método Mostrar
-        public DataTable Mostrar(DCategoria Categoria)
+        public DataTable Mostrar()
         {
             DataTable DtResultado = new DataTable("categoria");
             SqlConnection SqlCon = new SqlConnection();
