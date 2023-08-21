@@ -47,9 +47,9 @@ namespace CamadaNegocio
         // Método Buscar Nome
         public static DataTable BascarNome(string textobuscar)
         {
-            DCategoria Obj = new DCategoria;
+            DCategoria Obj = new DCategoria();
             Obj.TextoBuscar = textobuscar;
-            return new DCategoria().Mostrar();
+            return Obj.BuscarNome(Obj);
         }
     }
 }
