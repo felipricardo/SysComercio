@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CamadaNegocio", "CamadaNego
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CamadaDados", "CamadaDados\CamadaDados.csproj", "{F2CB1DA6-5C85-4FFC-AF1E-2A8893ADFA58}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CamadadeApresentacao", "CamadadeApresentacao\CamadadeApresentacao.csproj", "{38B17625-5F9F-472E-87DA-8EB8141F411D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CamadaApresentacao", "CamadadeApresentacao\CamadaApresentacao.csproj", "{38B17625-5F9F-472E-87DA-8EB8141F411D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

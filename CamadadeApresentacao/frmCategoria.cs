@@ -1,10 +1,23 @@
+using System.Windows.Forms;
+using CamadaNegocio;
+
 namespace CamadadeApresentacao
 {
-    public partial class Form1 : Form
+    public partial class frmCategoria : Form
     {
-        public Form1()
+        private bool eNovo = false;
+        private bool eEditar = false;
+
+        public frmCategoria()
         {
             InitializeComponent();
+            this.ttMensagem.SetToolTip(this.txtNome, "Insira o nome da Categoria");
+
+        }
+
+        private void frmCategoria_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
