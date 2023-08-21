@@ -39,7 +39,21 @@ namespace CamadaDados
         // Método Inserir
         public string Inserir(DCategoria Categoria)
         {
-
+            string resp = "";
+            SqlConnection SqlCon = new SqlConnection();
+            try
+            {
+                //codigo
+                SqlCon.ConnectionString = Conexao.Cn;
+                SqlCon.Open();
+            }catch(Exception ex)
+            {
+                resp = ex.Message;
+            }
+            finally
+            {
+                if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
+            }
         }
 
         // Método Editar
@@ -56,6 +70,12 @@ namespace CamadaDados
 
         // Método Mostrar
         public DataTable Mostrar(DCategoria Categoria)
+        {
+
+        }
+
+        // Método Buscar Nome
+        public string BuscarNome(DCategoria Categoria)
         {
 
         }
