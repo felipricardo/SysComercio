@@ -12,7 +12,10 @@ namespace CamadaNegocio
     {
         public static string Inserir(string nome, string descricao)
         {
-            DCategoria Obg = new CamadaDados.DCategoria();
+            DCategoria Obj = new CamadaDados.DCategoria();
+            Obj.Nome = nome;
+            Obj.Descricao = descricao;
+            return Obj.Inserir(Obj);
         }
     }
 }
