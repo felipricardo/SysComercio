@@ -90,19 +90,108 @@ namespace CamadaDados
         // Método Editar
         public string Editar(DCategoria Categoria)
         {
+            string resp = "";
+            SqlConnection SqlCon = new SqlConnection();
+            try
+            {
+                //codigo
+                SqlCon.ConnectionString = Conexao.Cn;
+                SqlCon.Open();
 
+                SqlCommand SqlCmd = new SqlCommand();
+                SqlCmd.Connection = SqlCon;
+                SqlCmd.CommandText = "speditar_categoria";
+                SqlCmd.CommandType = CommandType.StoredProcedure;
+
+                SqlParameter ParIdcategoria = new SqlParameter();
+                ParIdcategoria.ParameterName = "@idcategoria";
+                ParIdcategoria.SqlDbType = SqlDbType.Int;
+                ParIdcategoria.Value = Categoria.Idcategoria;
+                SqlCmd.Parameters.Add(ParIdcategoria);
+
+
+                SqlParameter ParNome = new SqlParameter();
+                ParNome.ParameterName = "@nome";
+                ParNome.SqlDbType = SqlDbType.VarChar;
+                ParNome.Size = 50;
+                ParNome.Value = Categoria.Nome;
+                SqlCmd.Parameters.Add(ParNome);
+
+                SqlParameter ParDescricao = new SqlParameter();
+                ParDescricao.ParameterName = "@descricao";
+                ParDescricao.SqlDbType = SqlDbType.VarChar;
+                ParDescricao.Size = 100;
+                ParDescricao.Value = Categoria.Descricao;
+                SqlCmd.Parameters.Add(ParDescricao);
+
+                // Executar o comando
+
+                resp = SqlCmd.ExecuteNonQuery() == 1 ? "Ok" : "A edição não foi inserida";
+            }
+            catch (Exception ex)
+            {
+                resp = ex.Message;
+            }
+            finally
+            {
+                if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
+            }
         }
 
-        // Método Excluir
+        // Método Deletar
         public string Excluir(DCategoria Categoria)
         {
+            string resp = "";
+            SqlConnection SqlCon = new SqlConnection();
+            try
+            {
+                //codigo
+                SqlCon.ConnectionString = Conexao.Cn;
+                SqlCon.Open();
 
+                SqlCommand SqlCmd = new SqlCommand();
+                SqlCmd.Connection = SqlCon;
+                SqlCmd.CommandText = "spdeletar_categoria";
+                SqlCmd.CommandType = CommandType.StoredProcedure;
+
+                SqlParameter ParIdcategoria = new SqlParameter();
+                ParIdcategoria.ParameterName = "@idcategoria";
+                ParIdcategoria.SqlDbType = SqlDbType.Int;
+                ParIdcategoria.Value = Categoria.Idcategoria;
+                SqlCmd.Parameters.Add(ParIdcategoria);
+
+                // Executar o comando
+
+                resp = SqlCmd.ExecuteNonQuery() == 1 ? "Ok" : "A exclusão não foi feita";
+            }
+            catch (Exception ex)
+            {
+                resp = ex.Message;
+            }
+            finally
+            {
+                if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
+            }
         }
 
         // Método Mostrar
         public DataTable Mostrar(DCategoria Categoria)
         {
-
+            DataTable DtResultado = new DataTable("categoria");
+            SqlConnection SqlCon = new SqlConnection();
+            try
+            {
+                SqlCon.ConnectionString = Conexao.Cn;
+                SqlCommand SqlCmd = new SqlCommand();
+                SqlCmd.Connection = SqlCon;
+                SqlCmd.CommandText = "spmostrar_categoria";
+                SqlCmd.CommandType = CommandType.StoredProcedure;
+                SqlDataAdapter sqlDat = new SqlDataAdapter(SqlCmd);
+                sqlDat.Fill(DtResultado);
+            }catch (Exception ex)
+            {
+                DtResultado = null;
+            }
         }
 
         // Método Buscar Nome
