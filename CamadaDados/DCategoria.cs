@@ -85,6 +85,7 @@ namespace CamadaDados
             {
                 if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
             }
+            return resp;
         }
 
         // Método Editar
@@ -136,6 +137,7 @@ namespace CamadaDados
             {
                 if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
             }
+            return resp;
         }
 
         // Método Deletar
