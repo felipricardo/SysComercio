@@ -172,6 +172,7 @@ namespace CamadaDados
             {
                 if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
             }
+            return resp;
         }
 
         // Método Mostrar
@@ -192,6 +193,7 @@ namespace CamadaDados
             {
                 DtResultado = null;
             }
+            return DtResultado;
         }
 
         // Método Buscar Nome
@@ -220,6 +222,7 @@ namespace CamadaDados
             {
                 DtResultado = null;
             }
+            return DtResultado;
         }
     }
 }
