@@ -46,7 +46,38 @@ namespace CamadaDados
                 //codigo
                 SqlCon.ConnectionString = Conexao.Cn;
                 SqlCon.Open();
-            }catch(Exception ex)
+
+                SqlCommand SqlCmd = new SqlCommand();
+                SqlCmd.Connection = SqlCon;
+                SqlCmd.CommandText = "spinserir_categoria";
+                SqlCmd.CommandType = CommandType.StoredProcedure;
+
+                SqlParameter ParIdcategoria = new SqlParameter();
+                ParIdcategoria.ParameterName = "@idcategoria";
+                ParIdcategoria.SqlDbType = SqlDbType.Int;
+                ParIdcategoria.Direction = ParameterDirection.Output;
+                SqlCmd.Parameters.Add(ParIdcategoria);
+
+
+                SqlParameter ParNome = new SqlParameter();
+                ParNome.ParameterName = "@nome";
+                ParNome.SqlDbType = SqlDbType.VarChar;
+                ParNome.Size = 50;
+                ParNome.Value = Categoria.Nome;
+                SqlCmd.Parameters.Add(ParNome);
+
+                SqlParameter ParDescricao = new SqlParameter();
+                ParDescricao.ParameterName = "@descricao";
+                ParDescricao.SqlDbType = SqlDbType.VarChar;
+                ParDescricao.Size = 100;
+                ParDescricao.Value = Categoria.Descricao;
+                SqlCmd.Parameters.Add(ParDescricao);
+
+                // Executar o comando
+
+                resp = SqlCmd.ExecuteNonQuery() == 1 ? "Ok" : "Registro não foi inserido";
+            }
+            catch(Exception ex)
             {
                 resp = ex.Message;
             }
