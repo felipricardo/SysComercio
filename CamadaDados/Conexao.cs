@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace CamadaDados
 {
-    public class Class1
+    internal class Conexao
     {
-
+        public static string Cn = "Data source = DESKTOP-B8GQSQB; Initial Catalog = dbcomercio; Integrated Security=true";
     }
 }
