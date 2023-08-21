@@ -8,7 +8,7 @@ using System.Data.SqlClient;
 
 namespace CamadaDados
 {
-    internal class DCategoria
+    public class DCategoria
     {
         private int _Idcategoria;
         private string _Nome;
