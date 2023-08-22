@@ -42,10 +42,11 @@ namespace CamadaNegocio
         public static DataTable Mostrar()
         {
             return new DCategoria().Mostrar();
+
         }
 
         // Método Buscar Nome
-        public static DataTable BascarNome(string textobuscar)
+        public static DataTable BuscarNome(string textobuscar)
         {
             DCategoria Obj = new DCategoria();
             Obj.TextoBuscar = textobuscar;
