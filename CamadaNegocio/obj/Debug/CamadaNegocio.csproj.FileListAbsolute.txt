@@ -1,0 +1,16 @@
+C:\Sistema Comercio\SysComercio\CamadaNegocio\bin\Debug\CamadaNegocio.dll
+C:\Sistema Comercio\SysComercio\CamadaNegocio\bin\Debug\CamadaNegocio.pdb
+C:\Sistema Comercio\SysComercio\CamadaNegocio\bin\Debug\CamadaDados.dll
+C:\Sistema Comercio\SysComercio\CamadaNegocio\bin\Debug\CamadaDados.pdb
+C:\Sistema Comercio\SysComercio\CamadaNegocio\obj\Debug\CamadaNegocio.csprojResolveAssemblyReference.cache
+C:\Sistema Comercio\SysComercio\CamadaNegocio\obj\Debug\CamadaNegocio.dll
+C:\Sistema Comercio\SysComercio\CamadaNegocio\obj\Debug\CamadaNegocio.pdb
+C:\Users\sensu\source\repos\Sistema Comercio\SysComercio\CamadaNegocio\bin\Debug\CamadaNegocio.dll
+C:\Users\sensu\source\repos\Sistema Comercio\SysComercio\CamadaNegocio\bin\Debug\CamadaNegocio.pdb
+C:\Users\sensu\source\repos\Sistema Comercio\SysComercio\CamadaNegocio\bin\Debug\CamadaDados.dll
+C:\Users\sensu\source\repos\Sistema Comercio\SysComercio\CamadaNegocio\bin\Debug\CamadaDados.pdb
+C:\Users\sensu\source\repos\Sistema Comercio\SysComercio\CamadaNegocio\obj\Debug\CamadaNegocio.csproj.AssemblyReference.cache
+C:\Users\sensu\source\repos\Sistema Comercio\SysComercio\CamadaNegocio\obj\Debug\CamadaNegocio.csproj.CoreCompileInputs.cache
+C:\Users\sensu\source\repos\Sistema Comercio\SysComercio\CamadaNegocio\obj\Debug\CamadaNegocio.csproj.CopyComplete
+C:\Users\sensu\source\repos\Sistema Comercio\SysComercio\CamadaNegocio\obj\Debug\CamadaNegocio.dll
+C:\Users\sensu\source\repos\Sistema Comercio\SysComercio\CamadaNegocio\obj\Debug\CamadaNegocio.pdb

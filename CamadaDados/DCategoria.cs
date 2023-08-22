@@ -15,28 +15,78 @@ namespace CamadaDados
         private string _Descricao;
         private string _TextoBuscar;
 
-        public int Idcategoria { get => _Idcategoria; set => _Idcategoria = value; }
-        public string Nome { get => _Nome; set => _Nome = value; }
-        public string Descricao { get => _Descricao; set => _Descricao = value; }
-        public string TextoBuscar { get => _TextoBuscar; set => _TextoBuscar = value; }
+        public int Idcategoria
+        {
+            get
+            {
+                return _Idcategoria;
+            }
 
-        // Construtor vazio
+            set
+            {
+                _Idcategoria = value;
+            }
+        }
+
+        public string Nome
+        {
+            get
+            {
+                return _Nome;
+            }
+
+            set
+            {
+                _Nome = value;
+            }
+        }
+
+        public string Descricao
+        {
+            get
+            {
+                return _Descricao;
+            }
+
+            set
+            {
+                _Descricao = value;
+            }
+        }
+
+        public string TextoBuscar
+        {
+            get
+            {
+                return _TextoBuscar;
+            }
+
+            set
+            {
+                _TextoBuscar = value;
+            }
+        }
+
+        //Construtor Vazio
 
         public DCategoria()
         {
 
         }
 
-        // Construtor com Parametros
+
+        //Construtor com Parametros
         public DCategoria(int idcategoria, string nome, string descricao, string textobuscar)
         {
             this.Idcategoria = idcategoria;
             this.Nome = nome;
             this.Descricao = descricao;
             this.TextoBuscar = textobuscar;
+
         }
 
-        // Método Inserir
+
+        //Método Inserir
         public string Inserir(DCategoria Categoria)
         {
             string resp = "";
@@ -54,7 +104,7 @@ namespace CamadaDados
 
                 SqlParameter ParIdcategoria = new SqlParameter();
                 ParIdcategoria.ParameterName = "@idcategoria";
-                ParIdcategoria.SqlDbType = SqlDbType.Int;
+                ParIdcategoria.SqlDbType=SqlDbType.Int;
                 ParIdcategoria.Direction = ParameterDirection.Output;
                 SqlCmd.Parameters.Add(ParIdcategoria);
 
@@ -66,29 +116,35 @@ namespace CamadaDados
                 ParNome.Value = Categoria.Nome;
                 SqlCmd.Parameters.Add(ParNome);
 
+
                 SqlParameter ParDescricao = new SqlParameter();
                 ParDescricao.ParameterName = "@descricao";
                 ParDescricao.SqlDbType = SqlDbType.VarChar;
-                ParDescricao.Size = 100;
+                ParDescricao.Size = 256;
                 ParDescricao.Value = Categoria.Descricao;
                 SqlCmd.Parameters.Add(ParDescricao);
 
-                // Executar o comando
+                //Executar o comando
 
-                resp = SqlCmd.ExecuteNonQuery() == 1 ? "Ok" : "Registro não foi inserido";
+                resp = SqlCmd.ExecuteNonQuery() == 1 ? "OK" : "Registro não foi Inserido";
+
+
             }
             catch(Exception ex)
             {
                 resp = ex.Message;
             }
+
             finally
             {
-                if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
+                if(SqlCon.State == ConnectionState.Open) SqlCon.Close();
             }
             return resp;
+
         }
 
-        // Método Editar
+
+        //Método Editar
         public string Editar(DCategoria Categoria)
         {
             string resp = "";
@@ -118,29 +174,35 @@ namespace CamadaDados
                 ParNome.Value = Categoria.Nome;
                 SqlCmd.Parameters.Add(ParNome);
 
+
                 SqlParameter ParDescricao = new SqlParameter();
                 ParDescricao.ParameterName = "@descricao";
                 ParDescricao.SqlDbType = SqlDbType.VarChar;
-                ParDescricao.Size = 100;
+                ParDescricao.Size = 256;
                 ParDescricao.Value = Categoria.Descricao;
                 SqlCmd.Parameters.Add(ParDescricao);
 
-                // Executar o comando
+                //Executar o comando
 
-                resp = SqlCmd.ExecuteNonQuery() == 1 ? "Ok" : "A edição não foi inserida";
+                resp = SqlCmd.ExecuteNonQuery() == 1 ? "OK" : "A edição não foi feita";
+
+
             }
             catch (Exception ex)
             {
                 resp = ex.Message;
             }
+
             finally
             {
                 if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
             }
             return resp;
+
         }
 
-        // Método Deletar
+
+        //Método Excluir
         public string Excluir(DCategoria Categoria)
         {
             string resp = "";
@@ -162,14 +224,19 @@ namespace CamadaDados
                 ParIdcategoria.Value = Categoria.Idcategoria;
                 SqlCmd.Parameters.Add(ParIdcategoria);
 
-                // Executar o comando
 
-                resp = SqlCmd.ExecuteNonQuery() == 1 ? "Ok" : "A exclusão não foi feita";
+
+                //Executar o comando
+
+                resp = SqlCmd.ExecuteNonQuery() == 1 ? "OK" : "A exclusão não foi feita";
+
+
             }
             catch (Exception ex)
             {
                 resp = ex.Message;
             }
+
             finally
             {
                 if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
@@ -177,7 +244,8 @@ namespace CamadaDados
             return resp;
         }
 
-        // Método Mostrar
+
+        //Método Mostrar
         public DataTable Mostrar()
         {
             DataTable DtResultado = new DataTable("categoria");
@@ -191,14 +259,17 @@ namespace CamadaDados
                 SqlCmd.CommandType = CommandType.StoredProcedure;
                 SqlDataAdapter sqlDat = new SqlDataAdapter(SqlCmd);
                 sqlDat.Fill(DtResultado);
-            }catch (Exception ex)
+
+         }catch(Exception ex)
             {
                 DtResultado = null;
             }
             return DtResultado;
+
         }
 
-        // Método Buscar Nome
+
+        //Método Buscar Nome
         public DataTable BuscarNome(DCategoria Categoria)
         {
             DataTable DtResultado = new DataTable("categoria");
@@ -210,8 +281,7 @@ namespace CamadaDados
                 SqlCmd.Connection = SqlCon;
                 SqlCmd.CommandText = "spbuscar_nome";
                 SqlCmd.CommandType = CommandType.StoredProcedure;
-                SqlDataAdapter sqlDat = new SqlDataAdapter(SqlCmd);
-                sqlDat.Fill(DtResultado);
+                
 
                 SqlParameter ParTextoBuscar = new SqlParameter();
                 ParTextoBuscar.ParameterName = "@textobuscar";
@@ -219,12 +289,19 @@ namespace CamadaDados
                 ParTextoBuscar.Size = 50;
                 ParTextoBuscar.Value = Categoria.TextoBuscar;
                 SqlCmd.Parameters.Add(ParTextoBuscar);
+
+                SqlDataAdapter sqlDat = new SqlDataAdapter(SqlCmd);
+                sqlDat.Fill(DtResultado);
+
             }
             catch (Exception ex)
             {
                 DtResultado = null;
             }
             return DtResultado;
+
         }
+
     }
+    
 }
