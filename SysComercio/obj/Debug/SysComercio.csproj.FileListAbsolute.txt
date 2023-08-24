@@ -29,3 +29,20 @@ C:\Users\sensu\source\repos\Sistema Comercio\SysComercio\SysComercio\obj\Debug\S
 C:\Users\sensu\source\repos\Sistema Comercio\SysComercio\SysComercio\obj\Debug\SysComercio.csproj.CopyComplete
 C:\Users\sensu\source\repos\Sistema Comercio\SysComercio\SysComercio\obj\Debug\SysComercio.exe
 C:\Users\sensu\source\repos\Sistema Comercio\SysComercio\SysComercio\obj\Debug\SysComercio.pdb
+C:\Users\sensu\source\repos\SysComercio\SysComercio\bin\Debug\SysComercio.exe.config
+C:\Users\sensu\source\repos\SysComercio\SysComercio\bin\Debug\SysComercio.exe
+C:\Users\sensu\source\repos\SysComercio\SysComercio\bin\Debug\SysComercio.pdb
+C:\Users\sensu\source\repos\SysComercio\SysComercio\bin\Debug\CamadaApresentacao.dll
+C:\Users\sensu\source\repos\SysComercio\SysComercio\bin\Debug\CamadaNegocio.dll
+C:\Users\sensu\source\repos\SysComercio\SysComercio\bin\Debug\CamadaDados.dll
+C:\Users\sensu\source\repos\SysComercio\SysComercio\bin\Debug\CamadaApresentacao.pdb
+C:\Users\sensu\source\repos\SysComercio\SysComercio\bin\Debug\CamadaNegocio.pdb
+C:\Users\sensu\source\repos\SysComercio\SysComercio\bin\Debug\CamadaDados.pdb
+C:\Users\sensu\source\repos\SysComercio\SysComercio\obj\Debug\SysComercio.csproj.AssemblyReference.cache
+C:\Users\sensu\source\repos\SysComercio\SysComercio\obj\Debug\SysComercio.csproj.SuggestedBindingRedirects.cache
+C:\Users\sensu\source\repos\SysComercio\SysComercio\obj\Debug\SysComercio.Properties.Resources.resources
+C:\Users\sensu\source\repos\SysComercio\SysComercio\obj\Debug\SysComercio.csproj.GenerateResource.cache
+C:\Users\sensu\source\repos\SysComercio\SysComercio\obj\Debug\SysComercio.csproj.CoreCompileInputs.cache
+C:\Users\sensu\source\repos\SysComercio\SysComercio\obj\Debug\SysComercio.csproj.CopyComplete
+C:\Users\sensu\source\repos\SysComercio\SysComercio\obj\Debug\SysComercio.exe
+C:\Users\sensu\source\repos\SysComercio\SysComercio\obj\Debug\SysComercio.pdb

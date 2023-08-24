@@ -283,5 +283,74 @@ namespace CamadaApresentacao
         {
 
         }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNomeGrupo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCadastrarGrupo_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string nomeGrupo = txtNomeGrupo.Text.Trim();
+
+                if (string.IsNullOrEmpty(nomeGrupo))
+                {
+                    MensagemErro("Preencha o nome do grupo antes de cadastrar.");
+                }
+                else
+                {
+                    string resp = NGrupo.Inserir(nomeGrupo);
+
+                    if (resp.Equals("OK"))
+                    {
+                        MensagemOk("Grupo cadastrado com sucesso!");
+                        LimparCamposGrupo();
+                        MostrarGrupos();
+                    }
+                    else
+                    {
+                        MensagemErro(resp);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro: " + ex.Message);
+            }
+        }
+
+        private void btnCancelarCadastroGrupo_Click(object sender, EventArgs e)
+        {
+            LimparCamposGrupo();
+            // Outras ações de limpeza ou configurações necessárias
+        }
+
     }
 }
