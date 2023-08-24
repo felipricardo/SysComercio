@@ -1,8 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\CamadaApresentacao"
+    "\\CamadaApresentacao",
+    "\\CamadaDados",
+    "\\CamadaNegocio"
   ],
-  "SelectedNode": "\\CamadaApresentacao\\frmCategoria.cs",
+  "SelectedNode": "\\CamadaNegocio\\NCategoria.cs",
   "PreviewInSolutionExplorer": false
 }
