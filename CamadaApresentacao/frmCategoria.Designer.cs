@@ -62,13 +62,13 @@
             this.label7 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.bntConfirmar = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.errorIcone = new System.Windows.Forms.ErrorProvider(this.components);
             this.ttMensagem = new System.Windows.Forms.ToolTip(this.components);
+            this.btnConfirmar = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataLista)).BeginInit();
@@ -447,7 +447,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.bntConfirmar);
+            this.groupBox2.Controls.Add(this.btnConfirmar);
             this.groupBox2.Controls.Add(this.textBox1);
             this.groupBox2.Controls.Add(this.textBox2);
             this.groupBox2.Controls.Add(this.label6);
@@ -461,17 +461,6 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Selecione a Transferência";
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
-            // 
-            // bntConfirmar
-            // 
-            this.bntConfirmar.Location = new System.Drawing.Point(425, 181);
-            this.bntConfirmar.Margin = new System.Windows.Forms.Padding(4);
-            this.bntConfirmar.Name = "bntConfirmar";
-            this.bntConfirmar.Size = new System.Drawing.Size(124, 45);
-            this.bntConfirmar.TabIndex = 21;
-            this.bntConfirmar.Text = "Confirmar";
-            this.bntConfirmar.UseVisualStyleBackColor = true;
-            this.bntConfirmar.Click += new System.EventHandler(this.button2_Click);
             // 
             // textBox1
             // 
@@ -518,6 +507,15 @@
             // 
             this.ttMensagem.IsBalloon = true;
             this.ttMensagem.Popup += new System.Windows.Forms.PopupEventHandler(this.ttMensagem_Popup);
+            // 
+            // btnConfirmar
+            // 
+            this.btnConfirmar.Location = new System.Drawing.Point(385, 159);
+            this.btnConfirmar.Name = "btnConfirmar";
+            this.btnConfirmar.Size = new System.Drawing.Size(159, 51);
+            this.btnConfirmar.TabIndex = 21;
+            this.btnConfirmar.Text = "Confirmar";
+            this.btnConfirmar.UseVisualStyleBackColor = true;
             // 
             // frmCategoria
             // 
@@ -581,7 +579,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button bntConfirmar;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label6;
@@ -591,5 +588,6 @@
         private System.Windows.Forms.TextBox txtNomeGrupo;
         private System.Windows.Forms.Button btnCadastrarGrupo;
         private System.Windows.Forms.Button btnCancelarCadastroGrupo;
+        private System.Windows.Forms.Button btnConfirmar;
     }
 }
