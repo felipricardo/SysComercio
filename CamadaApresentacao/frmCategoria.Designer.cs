@@ -43,7 +43,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textSelectGrupo = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnNovo = new System.Windows.Forms.Button();
@@ -62,13 +61,14 @@
             this.label7 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.errorIcone = new System.Windows.Forms.ErrorProvider(this.components);
             this.ttMensagem = new System.Windows.Forms.ToolTip(this.components);
             this.btnConfirmar = new System.Windows.Forms.Button();
+            this.grupoorigem = new System.Windows.Forms.DomainUpDown();
+            this.grupodestino = new System.Windows.Forms.DomainUpDown();
+            this.grupocategoria = new System.Windows.Forms.DomainUpDown();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataLista)).BeginInit();
@@ -239,7 +239,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textSelectGrupo);
+            this.groupBox1.Controls.Add(this.grupocategoria);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.btnCancelar);
             this.groupBox1.Controls.Add(this.btnNovo);
@@ -259,14 +259,6 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Categorias";
-            // 
-            // textSelectGrupo
-            // 
-            this.textSelectGrupo.Location = new System.Drawing.Point(366, 82);
-            this.textSelectGrupo.Margin = new System.Windows.Forms.Padding(4);
-            this.textSelectGrupo.Name = "textSelectGrupo";
-            this.textSelectGrupo.Size = new System.Drawing.Size(160, 22);
-            this.textSelectGrupo.TabIndex = 11;
             // 
             // label10
             // 
@@ -447,9 +439,9 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.grupodestino);
+            this.groupBox2.Controls.Add(this.grupoorigem);
             this.groupBox2.Controls.Add(this.btnConfirmar);
-            this.groupBox2.Controls.Add(this.textBox1);
-            this.groupBox2.Controls.Add(this.textBox2);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Location = new System.Drawing.Point(10, 9);
@@ -461,23 +453,6 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Selecione a Transferência";
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(385, 59);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(160, 22);
-            this.textBox1.TabIndex = 20;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(84, 59);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(160, 22);
-            this.textBox2.TabIndex = 19;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label6
             // 
@@ -516,6 +491,31 @@
             this.btnConfirmar.TabIndex = 21;
             this.btnConfirmar.Text = "Confirmar";
             this.btnConfirmar.UseVisualStyleBackColor = true;
+            this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
+            // 
+            // grupoorigem
+            // 
+            this.grupoorigem.Location = new System.Drawing.Point(83, 57);
+            this.grupoorigem.Name = "grupoorigem";
+            this.grupoorigem.Size = new System.Drawing.Size(155, 22);
+            this.grupoorigem.TabIndex = 22;
+            this.grupoorigem.Text = "selecione um grupo";
+            // 
+            // grupodestino
+            // 
+            this.grupodestino.Location = new System.Drawing.Point(384, 57);
+            this.grupodestino.Name = "grupodestino";
+            this.grupodestino.Size = new System.Drawing.Size(159, 22);
+            this.grupodestino.TabIndex = 23;
+            this.grupodestino.Text = "selecione um grupo";
+            // 
+            // grupocategoria
+            // 
+            this.grupocategoria.Location = new System.Drawing.Point(365, 85);
+            this.grupocategoria.Name = "grupocategoria";
+            this.grupocategoria.Size = new System.Drawing.Size(120, 22);
+            this.grupocategoria.TabIndex = 11;
+            this.grupocategoria.Text = "selecione um grupo";
             // 
             // frmCategoria
             // 
@@ -579,15 +579,15 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textSelectGrupo;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtNomeGrupo;
         private System.Windows.Forms.Button btnCadastrarGrupo;
         private System.Windows.Forms.Button btnCancelarCadastroGrupo;
         private System.Windows.Forms.Button btnConfirmar;
+        private System.Windows.Forms.DomainUpDown grupodestino;
+        private System.Windows.Forms.DomainUpDown grupoorigem;
+        private System.Windows.Forms.DomainUpDown grupocategoria;
     }
 }
