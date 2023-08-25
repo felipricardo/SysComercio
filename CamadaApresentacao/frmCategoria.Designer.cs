@@ -43,7 +43,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textSelectGrupo = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnNovo = new System.Windows.Forms.Button();
@@ -239,7 +239,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox5);
+            this.groupBox1.Controls.Add(this.textSelectGrupo);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.btnCancelar);
             this.groupBox1.Controls.Add(this.btnNovo);
@@ -260,13 +260,13 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Categorias";
             // 
-            // textBox5
+            // textSelectGrupo
             // 
-            this.textBox5.Location = new System.Drawing.Point(366, 82);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(160, 22);
-            this.textBox5.TabIndex = 11;
+            this.textSelectGrupo.Location = new System.Drawing.Point(366, 82);
+            this.textSelectGrupo.Margin = new System.Windows.Forms.Padding(4);
+            this.textSelectGrupo.Name = "textSelectGrupo";
+            this.textSelectGrupo.Size = new System.Drawing.Size(160, 22);
+            this.textSelectGrupo.TabIndex = 11;
             // 
             // label10
             // 
@@ -417,7 +417,7 @@
             // 
             // txtNomeGrupo
             // 
-            this.txtNomeGrupo.Location = new System.Drawing.Point(109, 59);
+            this.txtNomeGrupo.Location = new System.Drawing.Point(156, 63);
             this.txtNomeGrupo.Name = "txtNomeGrupo";
             this.txtNomeGrupo.Size = new System.Drawing.Size(160, 22);
             this.txtNomeGrupo.TabIndex = 20;
@@ -429,9 +429,9 @@
             this.label7.Location = new System.Drawing.Point(46, 66);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(44, 16);
+            this.label7.Size = new System.Drawing.Size(103, 16);
             this.label7.TabIndex = 11;
-            this.label7.Text = "Nome";
+            this.label7.Text = "Nome do Grupo";
             this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // tabPage4
@@ -516,6 +516,7 @@
             // ttMensagem
             // 
             this.ttMensagem.IsBalloon = true;
+            this.ttMensagem.Popup += new System.Windows.Forms.PopupEventHandler(this.ttMensagem_Popup);
             // 
             // frmCategoria
             // 
@@ -584,7 +585,7 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textSelectGrupo;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtNomeGrupo;
         private System.Windows.Forms.Button btnCadastrarGrupo;

@@ -45,7 +45,7 @@ namespace CamadaApresentacao
             this.txtDescricao.Text = string.Empty;
         }
 
-        //Limpar Campos
+        //Limpar Campos Cadastro Grupo
         private void LimparGrupo()
         {
             this.txtNomeGrupo.Text = string.Empty;
@@ -373,6 +373,11 @@ namespace CamadaApresentacao
         }
 
         private void txtNome_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ttMensagem_Popup(object sender, PopupEventArgs e)
         {
 
         }

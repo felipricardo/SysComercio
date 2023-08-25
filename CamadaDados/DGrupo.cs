@@ -67,18 +67,20 @@ namespace CamadaDados
                 ParIdgrupo.Value = Grupo.Idgrupo;
                 SqlCmd.Parameters.Add(ParIdgrupo);
 
-                // Executar o comando
-                SqlCmd.ExecuteNonQuery();
-                resp = "Grupo inserido com sucesso!";
+                //Executar o comando
+
+                resp = SqlCmd.ExecuteNonQuery() == 1 ? "OK" : "Registro não foi Inserido";
+
+
             }
             catch (Exception ex)
             {
-                resp = "Erro ao inserir grupo: " + ex.Message;
+                resp = ex.Message;
             }
+
             finally
             {
-                if (SqlCon.State == ConnectionState.Open)
-                    SqlCon.Close();
+                if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
             }
             return resp;
         }
