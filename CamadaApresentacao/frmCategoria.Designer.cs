@@ -62,7 +62,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.bntConfirmar = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -447,7 +447,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.button2);
+            this.groupBox2.Controls.Add(this.bntConfirmar);
             this.groupBox2.Controls.Add(this.textBox1);
             this.groupBox2.Controls.Add(this.textBox2);
             this.groupBox2.Controls.Add(this.label6);
@@ -462,15 +462,16 @@
             this.groupBox2.Text = "Selecione a Transferência";
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
-            // button2
+            // bntConfirmar
             // 
-            this.button2.Location = new System.Drawing.Point(425, 181);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(124, 45);
-            this.button2.TabIndex = 21;
-            this.button2.Text = "Confirmar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.bntConfirmar.Location = new System.Drawing.Point(425, 181);
+            this.bntConfirmar.Margin = new System.Windows.Forms.Padding(4);
+            this.bntConfirmar.Name = "bntConfirmar";
+            this.bntConfirmar.Size = new System.Drawing.Size(124, 45);
+            this.bntConfirmar.TabIndex = 21;
+            this.bntConfirmar.Text = "Confirmar";
+            this.bntConfirmar.UseVisualStyleBackColor = true;
+            this.bntConfirmar.Click += new System.EventHandler(this.button2_Click);
             // 
             // textBox1
             // 
@@ -580,7 +581,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button bntConfirmar;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label6;
