@@ -391,8 +391,52 @@ namespace CamadaApresentacao
 
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
+            if (dataLista.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Selecione uma categoria na lista.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
+            if (grupoorigem.SelectedItem == null)
+            {
+                MessageBox.Show("Selecione um grupo de origem.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (grupodestino.SelectedItem == null)
+            {
+                MessageBox.Show("Selecione um grupo de destino.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            try
+            {
+                int idCategoria = Convert.ToInt32(dataLista.SelectedRows[0].Cells["idcategoria"].Value);
+                var grupoOrigem = grupoorigem.SelectedItem as DGrupo;
+                var grupoDestino = grupodestino.SelectedItem as DGrupo;
+
+                if (grupoOrigem != null && grupoDestino != null)
+                {
+                    string resposta = NTransferencia.TransferirCategorias(idCategoria, grupoOrigem.Idgrupo, grupoDestino.Idgrupo);
+
+                    if (resposta.Equals("Categoria transferida com sucesso"))
+                    {
+                        MessageBox.Show(resposta, "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        // Atualize a exibição das categorias após a transferência
+                        Mostrar();
+                    }
+                    else
+                    {
+                        MessageBox.Show(resposta, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
+
 
         private void label4_Click(object sender, EventArgs e)
         {
@@ -404,12 +448,19 @@ namespace CamadaApresentacao
             if (grupoorigem.SelectedItem != null)
             {
                 var selectedGroup = grupoorigem.SelectedItem as Grupo; // Substitua "Grupo" pela classe real
+
                 if (selectedGroup != null)
                 {
                     lblInfo.Text = $"Grupo de Origem selecionado: ID = {selectedGroup.Idgrupo}, Nome = {selectedGroup.Nome}";
+                    // Aqui você pode preencher outros controles do formulário com informações do grupo, se necessário
                 }
             }
+            else
+            {
+                lblInfo.Text = "Nenhum grupo selecionado.";
+            }
         }
+
 
     }
 }
