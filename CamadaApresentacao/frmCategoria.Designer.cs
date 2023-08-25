@@ -513,7 +513,7 @@
             // 
             this.grupocategoria.Location = new System.Drawing.Point(365, 85);
             this.grupocategoria.Name = "grupocategoria";
-            this.grupocategoria.Size = new System.Drawing.Size(120, 22);
+            this.grupocategoria.Size = new System.Drawing.Size(158, 22);
             this.grupocategoria.TabIndex = 11;
             this.grupocategoria.Text = "selecione um grupo";
             // 
