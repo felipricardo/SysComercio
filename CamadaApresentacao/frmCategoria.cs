@@ -412,12 +412,12 @@ namespace CamadaApresentacao
             try
             {
                 int idCategoria = Convert.ToInt32(dataLista.SelectedRows[0].Cells["idcategoria"].Value);
-                var grupoOrigem = grupoorigem.SelectedItem as DGrupo;
-                var grupoDestino = grupodestino.SelectedItem as DGrupo;
+                var grupoOrigem = grupoorigem.SelectedItem as string;
+                var grupoDestino = grupodestino.SelectedItem as string;
 
                 if (grupoOrigem != null && grupoDestino != null)
                 {
-                    string resposta = NTransferencia.TransferirCategorias(idCategoria, grupoOrigem.Idgrupo, grupoDestino.Idgrupo);
+                    string resposta = NTransferencia.TransferirCategorias(idCategoria, grupoOrigem.idgrupo, grupoDestino.idgrupo);
 
                     if (resposta.Equals("Categoria transferida com sucesso"))
                     {

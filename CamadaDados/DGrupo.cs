@@ -85,5 +85,30 @@ namespace CamadaDados
             }
             return resp;
         }
+
+
+        // Mostrar Grupo
+        public DataTable Mostrar()
+        {
+            DataTable DtResultado = new DataTable("grupo");
+            SqlConnection SqlCon = new SqlConnection();
+            try
+            {
+                SqlCon.ConnectionString = Conexao.Cn;
+                SqlCommand SqlCmd = new SqlCommand();
+                SqlCmd.Connection = SqlCon;
+                SqlCmd.CommandText = "spmostrar_categoria";
+                SqlCmd.CommandType = CommandType.StoredProcedure;
+                SqlDataAdapter sqlDat = new SqlDataAdapter(SqlCmd);
+                sqlDat.Fill(DtResultado);
+
+            }
+            catch (Exception ex)
+            {
+                DtResultado = null;
+            }
+            return DtResultado;
+
+        }
     }
 }

@@ -245,7 +245,7 @@ namespace CamadaDados
         }
 
 
-        //Método Mostrar
+        //Método Mostrar categoria
         public DataTable Mostrar()
         {
             DataTable DtResultado = new DataTable("categoria");
