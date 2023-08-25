@@ -56,8 +56,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.btnCancelarCadastroGrupo = new System.Windows.Forms.Button();
+            this.btnCadastrarGrupo = new System.Windows.Forms.Button();
+            this.txtNomeGrupo = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button2 = new System.Windows.Forms.Button();
@@ -67,10 +69,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.errorIcone = new System.Windows.Forms.ErrorProvider(this.components);
             this.ttMensagem = new System.Windows.Forms.ToolTip(this.components);
-            this.txtNomeGrupo = new System.Windows.Forms.TextBox();
-            this.btnIdgrupo = new System.Windows.Forms.TextBox();
-            this.btnCadastrarGrupo = new System.Windows.Forms.Button();
-            this.btnCancelarCadastroGrupo = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataLista)).BeginInit();
@@ -341,6 +339,7 @@
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(160, 22);
             this.txtNome.TabIndex = 4;
+            this.txtNome.TextChanged += new System.EventHandler(this.txtNome_TextChanged);
             // 
             // txtIdCategoria
             // 
@@ -349,6 +348,7 @@
             this.txtIdCategoria.Name = "txtIdCategoria";
             this.txtIdCategoria.Size = new System.Drawing.Size(160, 22);
             this.txtIdCategoria.TabIndex = 3;
+            this.txtIdCategoria.TextChanged += new System.EventHandler(this.txtIdCategoria_TextChanged);
             // 
             // label5
             // 
@@ -379,15 +379,14 @@
             this.label3.Size = new System.Drawing.Size(51, 16);
             this.label3.TabIndex = 0;
             this.label3.Text = "Código";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.btnCancelarCadastroGrupo);
             this.tabPage3.Controls.Add(this.btnCadastrarGrupo);
-            this.tabPage3.Controls.Add(this.btnIdgrupo);
             this.tabPage3.Controls.Add(this.txtNomeGrupo);
             this.tabPage3.Controls.Add(this.label7);
-            this.tabPage3.Controls.Add(this.label8);
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
@@ -395,6 +394,34 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Cadastrar Grupo";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // btnCancelarCadastroGrupo
+            // 
+            this.btnCancelarCadastroGrupo.Location = new System.Drawing.Point(218, 123);
+            this.btnCancelarCadastroGrupo.Name = "btnCancelarCadastroGrupo";
+            this.btnCancelarCadastroGrupo.Size = new System.Drawing.Size(108, 27);
+            this.btnCancelarCadastroGrupo.TabIndex = 23;
+            this.btnCancelarCadastroGrupo.Text = "Cancelar";
+            this.btnCancelarCadastroGrupo.UseVisualStyleBackColor = true;
+            this.btnCancelarCadastroGrupo.Click += new System.EventHandler(this.btnCancelarCadastroGrupo_Click);
+            // 
+            // btnCadastrarGrupo
+            // 
+            this.btnCadastrarGrupo.Location = new System.Drawing.Point(49, 123);
+            this.btnCadastrarGrupo.Name = "btnCadastrarGrupo";
+            this.btnCadastrarGrupo.Size = new System.Drawing.Size(107, 27);
+            this.btnCadastrarGrupo.TabIndex = 22;
+            this.btnCadastrarGrupo.Text = "Cadastrar";
+            this.btnCadastrarGrupo.UseVisualStyleBackColor = true;
+            this.btnCadastrarGrupo.Click += new System.EventHandler(this.btnCadastrarGrupo_Click);
+            // 
+            // txtNomeGrupo
+            // 
+            this.txtNomeGrupo.Location = new System.Drawing.Point(109, 59);
+            this.txtNomeGrupo.Name = "txtNomeGrupo";
+            this.txtNomeGrupo.Size = new System.Drawing.Size(160, 22);
+            this.txtNomeGrupo.TabIndex = 20;
+            this.txtNomeGrupo.TextChanged += new System.EventHandler(this.txtNomeGrupo_TextChanged);
             // 
             // label7
             // 
@@ -406,17 +433,6 @@
             this.label7.TabIndex = 11;
             this.label7.Text = "Nome";
             this.label7.Click += new System.EventHandler(this.label7_Click);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(39, 23);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(51, 16);
-            this.label8.TabIndex = 10;
-            this.label8.Text = "Código";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // tabPage4
             // 
@@ -501,41 +517,6 @@
             // 
             this.ttMensagem.IsBalloon = true;
             // 
-            // txtNomeGrupo
-            // 
-            this.txtNomeGrupo.Location = new System.Drawing.Point(109, 59);
-            this.txtNomeGrupo.Name = "txtNomeGrupo";
-            this.txtNomeGrupo.Size = new System.Drawing.Size(160, 22);
-            this.txtNomeGrupo.TabIndex = 20;
-            this.txtNomeGrupo.TextChanged += new System.EventHandler(this.txtNomeGrupo_TextChanged);
-            // 
-            // btnIdgrupo
-            // 
-            this.btnIdgrupo.Location = new System.Drawing.Point(109, 23);
-            this.btnIdgrupo.Name = "btnIdgrupo";
-            this.btnIdgrupo.Size = new System.Drawing.Size(160, 22);
-            this.btnIdgrupo.TabIndex = 21;
-            // 
-            // btnCadastrarGrupo
-            // 
-            this.btnCadastrarGrupo.Location = new System.Drawing.Point(49, 123);
-            this.btnCadastrarGrupo.Name = "btnCadastrarGrupo";
-            this.btnCadastrarGrupo.Size = new System.Drawing.Size(107, 27);
-            this.btnCadastrarGrupo.TabIndex = 22;
-            this.btnCadastrarGrupo.Text = "Cadastrar";
-            this.btnCadastrarGrupo.UseVisualStyleBackColor = true;
-            this.btnCadastrarGrupo.Click += new System.EventHandler(this.btnCadastrarGrupo_Click);
-            // 
-            // btnCancelarCadastroGrupo
-            // 
-            this.btnCancelarCadastroGrupo.Location = new System.Drawing.Point(218, 123);
-            this.btnCancelarCadastroGrupo.Name = "btnCancelarCadastroGrupo";
-            this.btnCancelarCadastroGrupo.Size = new System.Drawing.Size(108, 27);
-            this.btnCancelarCadastroGrupo.TabIndex = 23;
-            this.btnCancelarCadastroGrupo.Text = "Cancelar";
-            this.btnCancelarCadastroGrupo.UseVisualStyleBackColor = true;
-            this.btnCancelarCadastroGrupo.Click += new System.EventHandler(this.btnCancelarCadastroGrupo_Click);
-            // 
             // frmCategoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -596,7 +577,6 @@
         private System.Windows.Forms.ToolTip ttMensagem;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button button2;
@@ -607,7 +587,6 @@
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtNomeGrupo;
-        private System.Windows.Forms.TextBox btnIdgrupo;
         private System.Windows.Forms.Button btnCadastrarGrupo;
         private System.Windows.Forms.Button btnCancelarCadastroGrupo;
     }

@@ -45,6 +45,12 @@ namespace CamadaApresentacao
             this.txtDescricao.Text = string.Empty;
         }
 
+        //Limpar Campos
+        private void LimparGrupo()
+        {
+            this.txtNomeGrupo.Text = string.Empty;
+        }
+
 
         //Habilitar os text box
         private void Habilitar(bool valor)
@@ -331,8 +337,6 @@ namespace CamadaApresentacao
                     if (resp.Equals("OK"))
                     {
                         MensagemOk("Grupo cadastrado com sucesso!");
-                        LimparCamposGrupo();
-                        MostrarGrupos();
                     }
                     else
                     {
@@ -344,13 +348,33 @@ namespace CamadaApresentacao
             {
                 MessageBox.Show("Erro: " + ex.Message);
             }
+            this.LimparGrupo();
         }
 
         private void btnCancelarCadastroGrupo_Click(object sender, EventArgs e)
         {
-            LimparCamposGrupo();
             // Outras ações de limpeza ou configurações necessárias
+            this.LimparGrupo();
         }
 
+        private void txtIdCategoria_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnIdgrupo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNome_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

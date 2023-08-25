@@ -50,7 +50,7 @@ namespace CamadaDados
                 // Configurar o comando
                 SqlCommand SqlCmd = new SqlCommand();
                 SqlCmd.Connection = SqlCon;
-                SqlCmd.CommandText = "spinserir_grupo"; // Nome do procedimento armazenado
+                SqlCmd.CommandText = "spinserirgrupo"; // Nome do procedimento armazenado
                 SqlCmd.CommandType = CommandType.StoredProcedure;
 
                 // Parâmetro para o nome do grupo
@@ -60,6 +60,12 @@ namespace CamadaDados
                 ParNome.Size = 50;
                 ParNome.Value = Grupo.Nome;
                 SqlCmd.Parameters.Add(ParNome);
+
+                SqlParameter ParIdgrupo = new SqlParameter();
+                ParIdgrupo.ParameterName = "@idgrupo";
+                ParIdgrupo.SqlDbType = SqlDbType.Int;
+                ParIdgrupo.Value = Grupo.Idgrupo;
+                SqlCmd.Parameters.Add(ParIdgrupo);
 
                 // Executar o comando
                 SqlCmd.ExecuteNonQuery();
