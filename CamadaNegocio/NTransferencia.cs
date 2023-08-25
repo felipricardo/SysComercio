@@ -3,10 +3,25 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CamadaDados;
+using System.Data;
 
 namespace CamadaNegocio
 {
-    internal class NTransferencia
+    public class NTransferencia
     {
+        public static string TransferirCategorias(int idCategoria, int idGrupoOrigem, int idGrupoDestino)
+        {
+            try
+            {
+                DTransferencia transferencia = new DTransferencia();
+                string resposta = transferencia.TransferirCategorias(idCategoria, idGrupoOrigem, idGrupoDestino);
+                return resposta;
+            }
+            catch (Exception ex)
+            {
+                return "Erro na transferência: " + ex.Message;
+            }
+        }
     }
 }
