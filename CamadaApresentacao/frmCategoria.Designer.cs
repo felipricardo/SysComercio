@@ -501,6 +501,7 @@
             this.grupoorigem.Size = new System.Drawing.Size(155, 22);
             this.grupoorigem.TabIndex = 22;
             this.grupoorigem.Text = "selecione um grupo";
+            this.grupoorigem.SelectedItemChanged += new System.EventHandler(this.grupoorigem_SelectedItemChanged);
             // 
             // grupodestino
             // 

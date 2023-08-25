@@ -12,6 +12,7 @@ namespace CamadaDados
     {
         private int _Idgrupo;
         private string _Nome;
+        private List<DCategoria> _Categorias;
 
         public int Idgrupo
         {

@@ -9,12 +9,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CamadaNegocio;
 
+
 namespace CamadaApresentacao
 {
     public partial class frmCategoria : Form
     {
         private bool eNovo = false;
         private bool eEditar = false;
+
 
         public frmCategoria()
         {
@@ -393,6 +395,11 @@ namespace CamadaApresentacao
         }
 
         private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void grupoorigem_SelectedItemChanged(object sender, EventArgs e)
         {
 
         }

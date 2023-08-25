@@ -45,6 +45,7 @@
     <Compile Include="Conexao.cs" />
     <Compile Include="DCategoria.cs" />
     <Compile Include="DGrupo.cs" />
+    <Compile Include="DTransferencia.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
