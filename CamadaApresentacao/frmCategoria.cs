@@ -401,7 +401,15 @@ namespace CamadaApresentacao
 
         private void grupoorigem_SelectedItemChanged(object sender, EventArgs e)
         {
-
+            if (grupoorigem.SelectedItem != null)
+            {
+                var selectedGroup = grupoorigem.SelectedItem as Grupo; // Substitua "Grupo" pela classe real
+                if (selectedGroup != null)
+                {
+                    lblInfo.Text = $"Grupo de Origem selecionado: ID = {selectedGroup.Idgrupo}, Nome = {selectedGroup.Nome}";
+                }
+            }
         }
+
     }
 }
