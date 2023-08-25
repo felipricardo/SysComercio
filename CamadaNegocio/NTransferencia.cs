@@ -10,12 +10,12 @@ namespace CamadaNegocio
 {
     public class NTransferencia
     {
-        public static string TransferirCategorias(int idCategoria, int idGrupoOrigem, int idGrupoDestino)
+        public static string TransferirCategorias(int idcategoria, int idGrupoOrigem, int idGrupoDestino)
         {
             try
             {
                 DTransferencia transferencia = new DTransferencia();
-                string resposta = transferencia.TransferirCategorias(idCategoria, idGrupoOrigem, idGrupoDestino);
+                string resposta = transferencia.TransferirCategorias(idcategoria, idGrupoOrigem, idGrupoDestino);
                 return resposta;
             }
             catch (Exception ex)
